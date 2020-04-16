@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+ 
+  
+  <servlet>
+  <servlet-name>DB</servlet-name>
+  <servlet-class>com.nt.servlet.ServletDB_IntiParam</servlet-class>
+  <init-param>
+ <param-name>driver</param-name>
+<param-value>oracle.jdbc.driver.OracleDriver</param-value> 
+  </init-param>
+  <init-param>
+  <param-name>dburl</param-name>
+  <param-value>jdbc:oracle:thin@loaclhost:1521:xe</param-value>
+  </init-param>
+  <init-param>
+  <param-name>dbuser</param-name>
+  <param-value>system</param-value>
+  </init-param>
+  <init-param>
+  <param-name>dbpwd</param-name>
+  <param-value>9658</param-value>
+  </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>DB</servlet-name>
+  <url-pattern>/DBServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
+</element>
