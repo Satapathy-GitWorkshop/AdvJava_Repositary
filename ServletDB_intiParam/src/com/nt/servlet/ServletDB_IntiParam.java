@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 public class ServletDB_IntiParam extends HttpServlet {
 	Connection con;
 	PreparedStatement ps;
@@ -59,7 +57,12 @@ public class ServletDB_IntiParam extends HttpServlet {
 	    		pw.println("<br>Patient No::"+rs.getInt(1));
 				pw.println("<br>Patient Name::"+rs.getString(2));
 				pw.println("<br>Patient Address::"+rs.getString(3));
-	    	}//if
+	    	}
+	    	else
+	    	{
+	    		pw.println("<br> Result NotFound");
+	    	}
+	    	    
 	    //Close ResultsetObject
 	    	rs.close();
 	    	//Close Stream Object
